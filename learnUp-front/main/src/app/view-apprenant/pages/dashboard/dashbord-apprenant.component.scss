@@ -1,0 +1,108 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; // Center horizontally
+  margin-bottom: 20px;
+
+  .search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 300px;
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    background-color: #2710d2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
+.categories-container {
+  display: flex;
+  gap: 20px;
+}
+
+.category {
+  padding: 15px;
+  background-color: #d3e7f0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.course-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; // Center horizontally
+  width: 100%;
+
+  .course-card {
+    width: calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-image-container {
+      img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+
+    .course-text {
+      padding: 15px;
+
+      .course-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .course-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+        padding-bottom: 10px; /* Add padding bottom for separation */
+        
+      }
+    }
+
+    .course-price-promotion-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      margin-top: auto;
+
+      .course-price {
+        font-size: 16px;
+        color: #091285;
+      }
+    }
+  }
+}
+
+.no-courses-found {
+  margin-top: 20px;
+  color: #f44336;
+  font-size: 18px;
+}
+
+
+

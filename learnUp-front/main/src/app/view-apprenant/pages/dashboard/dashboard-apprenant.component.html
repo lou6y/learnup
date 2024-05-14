@@ -1,0 +1,32 @@
+<div class="search-container">
+  <input type="text" placeholder="Search" #searchInput class="search-input" />
+  <button class="search-button" (click)="searchCoursByCourName(searchInput.value)">Search</button>
+</div>
+
+<div class="categories-container">
+  <div class="category" *ngFor="let category of categories" (click)="filterCoursByCategory(category.categoryName)">
+    {{ category.categoryName }}
+  </div>
+</div>
+
+<div class="course-details" *ngIf="payments$ | async as payments; else noPayments">
+  <div class="course-card" *ngFor="let payment of payments" (click)="viewCourDetails(payment.cour?.courId!)">
+    <div class="course-image-container">
+      <img *ngIf="payment.cour?.imageData" [src]="'data:image/png;base64,' + payment.cour?.imageData" alt="Course Image" class="course-image" />
+    </div>
+    <div class="course-text">
+      <div class="course-name">{{ payment.cour?.courName }}</div>
+      <div class="course-description">
+        {{ payment.cour?.description!.length > 50 ? payment.cour?.description!.substring(0, 50) + '...' : payment.cour?.description }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noPayments>
+  <div class="no-courses-found">No Courses Found!</div>
+</ng-template>
+
+
+
+

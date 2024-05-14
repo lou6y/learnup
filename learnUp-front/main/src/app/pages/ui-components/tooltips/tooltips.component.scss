@@ -1,0 +1,23 @@
+/* Custom table styles */
+.cour-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cour-table th, .cour-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.cour-table th {
+  background-color: #ecac7c;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.cour-row:hover {
+  background-color: #e9edee;
+  transition: background-color 0.3s ease;
+}

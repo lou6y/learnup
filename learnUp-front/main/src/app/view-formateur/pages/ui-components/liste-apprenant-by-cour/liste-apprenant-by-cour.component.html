@@ -1,0 +1,38 @@
+<div class="container">
+  <h2 class="text-center mb-4">Apprenants par Cours</h2>
+  <div class="card mb-3" *ngFor="let cour of cours">
+    <div class="card-header bg-primary text-white">
+      <h5>{{ cour.courName }}</h5>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Full Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Utilisation de ngFor pour parcourir chaque apprenant consulté pour ce cours -->
+          <ng-container *ngFor="let apprenant of apprenantsMap.get(cour.courId!); let i = index">
+            <tr>
+              <td>{{ i + 1 }}</td> <!-- Numéro de l'apprenant dans la liste -->
+              <td>{{ apprenant.fullName }}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  

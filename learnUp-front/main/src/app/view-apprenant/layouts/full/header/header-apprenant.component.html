@@ -1,0 +1,43 @@
+<mat-toolbar class="topbar">
+  <!-- Mobile Menu -->
+  <button mat-icon-button (click)="toggleMobileNav.emit()" *ngIf="!showToggle">
+    <i-tabler name="menu-2" class="icon-20 d-flex"></i-tabler>
+  </button>
+  <!-- --------------------------------------------------------------- -->
+
+  <!-- --------------------------------------------------------------- -->
+  <!-- Notification Dropdown -->
+  <!-- --------------------------------------------------------------- -->
+
+  <button mat-icon-button aria-label="Messages" (click)="fetchMessageNotifications()">
+    <i-tabler
+      class="d-flex"
+      name="message-circle"
+      [matBadge]="notificationsMessage ? notificationsMessage.length : 0"
+      [matBadgeColor]="notificationsMessage && notificationsMessage.length > 0 ? 'primary' : 'accent'"
+    ></i-tabler>
+  </button>
+  
+  
+  <span class="flex-1-auto"></span>
+
+  <!-- --------------------------------------------------------------- -->
+  <!-- profile Dropdown -->
+  <!-- --------------------------------------------------------------- -->
+  <a
+  mat-flat-button
+  color="primary"
+  target="_blank"
+  class="d-flex justify-content-center"
+  (click)="logout()"
+>
+ log out
+</a>
+
+<button mat-icon-button *ngIf=" apprenant" [routerLink]="['/ui-components/profil-apprenant']">
+  <div class="profile-initials">
+    <span>{{ getInitials(apprenant.fullName) }}</span>
+  </div>
+</button>
+
+</mat-toolbar>

@@ -1,0 +1,30 @@
+.cardWithShadow {
+    box-shadow: 0 4px 8px 0 rgba(24, 8, 245, 0.2);
+    transition: box-shadow 0.3s ease; // Add transition for box-shadow
+    border-radius: 5px; // Adjust border-radius as needed
+    overflow: hidden; // Ensure card content doesn't overflow
+    margin-bottom: 20px; // Add margin bottom for spacing
+    background-color: #c9d9ef; // Set a background color for the card
+  }
+  
+  .theme-card {
+    // Add any theme-specific styles here
+  }
+  
+  .b-t-1 {
+    border-top: 1px solid #b0bddb; // Add border top to separate card content
+  }
+  
+  .mat-table {
+    width: 100%; // Ensure table takes full width of parent container
+    margin-bottom: 20px; // Add margin bottom for spacing
+  }
+  
+  .mat-header-row, .mat-row {
+    // Add any styling for header row and data rows here
+  }
+  
+  .text-muted {
+    color: #3c93e0; // Adjust text color for muted text
+  }
+  

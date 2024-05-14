@@ -1,0 +1,25 @@
+<div class="table-container">
+    <table class="cour-table" id="courTable">
+        <thead>
+            <tr>
+              <th>#</th>
+              <th>Cour Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let courItem of courList; let i = index" (click)="viewCourDetails(courItem.courId!)" id="{{ courItem.courId }}">
+          <td>{{ i + 1 }}</td>
+          <td>{{ courItem.courName }}</td>
+          <td>{{ courItem.price }}</td>
+          <td>
+            <div class="haj-image-container">
+              <img *ngIf="courItem.imageData" [src]="'data:image/png;base64,' + courItem.imageData" alt="Course Image" class="haj-image" />
+            </div>
+          </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

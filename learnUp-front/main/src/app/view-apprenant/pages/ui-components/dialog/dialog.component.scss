@@ -1,0 +1,99 @@
+.dialog-container {
+    background-color: #ffcc00; // Couleur de fond vibrante
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(20, 171, 213, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    animation: fadeIn 0.5s ease; // Animation d'entrée
+    border: 2px solid aqua; // Ajout d'une bordure solide avec une couleur
+  
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  
+  .dialog-header {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: colorChange 2s infinite alternate; // Ajouter l'animation de changement de couleur
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: #007bff; // Couleur de départ
+    }
+    50% {
+      color: #ef6a2d; // Couleur intermédiaire
+    }
+    100% {
+      color: #22e614; // Couleur finale
+    }
+  }
+  
+  
+  .dialog-title {
+    margin: 0;
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold; // Ajouter le style en gras
+  }
+  
+  .dialog-body {
+    margin-bottom: 20px;
+    padding: 10px; // Ajouter un padding pour l'espace intérieur
+    background-color: #87daeb; // Ajouter une couleur de fond légère
+    border-radius: 8px; // Ajouter une bordure arrondie
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Ajouter une ombre subtile
+  }
+  
+  .dialog-section {
+    margin-bottom: 10px;
+  }
+  
+  .section-title {
+    margin: 0 0 10px; // Ajouter un peu plus d'espace en bas pour la séparation
+    font-size: 20px; // Augmenter légèrement la taille de la police
+    font-weight: bold; // Mettre le texte en gras
+    color: #007bff; // Choisir une couleur vive pour le titre
+    text-transform: uppercase; // Mettre le texte en majuscules pour une meilleure lisibilité
+  }
+  
+  
+  .dialog-content {
+    font-size: 16px;
+    color: #333333; // Changer la couleur du texte pour une meilleure lisibilité
+    line-height: 1.6; // Augmenter légèrement l'espacement entre les lignes pour une meilleure lisibilité
+  }
+  
+  .dialog-footer {
+    text-align: center;
+    margin-top: 20px; // Ajouter un peu d'espace en haut pour séparer du contenu précédent
+  }
+  
+  
+  .dialog-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+
+

@@ -1,0 +1,56 @@
+/* Ajoutez ces styles à votre fichier CSS */
+.table-responsive {
+  margin-top: 20px;
+
+  .table {
+    border-radius: 8px; // Coins arrondis pour la table
+    border-collapse: collapse; // Fusion des bordures de la table
+    width: 100%;
+  }
+
+  th, td {
+    border: none; // Supprimer la bordure par défaut
+    padding: 12px;
+    vertical-align: middle;
+    transition: background-color 0.3s ease; // Animation de transition pour les cellules
+  }
+
+  th {
+    background-color: #4285f4; // Bleu vif pour les en-têtes de tableau
+    font-weight: bold;
+    color: #ffffff; // Texte blanc
+  }
+
+  tr:nth-child(even) {
+    background-color: #ffffff; // Blanc pour les lignes paires
+    transition: background-color 0.3s ease; // Animation de transition pour les lignes
+  }
+
+  tr:hover {
+    background-color: #f0f0f0; // Gris plus foncé au survol
+  }
+
+  .haj-image-container {
+    width: 50px; // Ajuster la largeur si nécessaire
+    height: 50px; // Ajuster la hauteur si nécessaire
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; // Forme arrondie pour le conteneur d'image
+
+    .haj-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%; // Forme arrondie pour l'image
+      transition: transform 0.3s ease; // Animation de mise à l'échelle fluide
+
+      &:hover {
+        transform: scale(1.1); // Zoom au survol
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,59 @@
+.quiz-container {
+  padding: 20px;
+  background-color: #d2e0e7 ;
+  border-radius: 8px;
+  
+}
+
+.question-item {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.responses-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px; 
+}
+
+.response-label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #eeedf5;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-left: 0; /* Set margin-left to 0 for all responses */
+}
+
+.false-response {
+  margin-left: 0; /* Set margin-left to 0 for all false responses */
+}
+
+.submit-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #23aec7;
+  color: #ffffff;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0d8bf2;
+}
+.question-text strong {
+  font-weight: bold;
+  /* Add additional styling here if needed */
+}
+.question-text strong {
+  font-weight: bold;
+  text-align: center;
+}
+.quiz-container h2 {
+  margin-top: 0; /* Supprimer la marge par défaut du haut */
+}

@@ -1,0 +1,84 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Logo" width="100" height="80">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#/home">Home</a></li>
+    <li><a href="#/home">Courses</a></li>
+    <li><a href="#/authentication/login">LogIn</a></li>
+    <li><a href="#/authentication/register">Register</a></li>
+  </ul>
+</nav>
+
+<main class="pageWrapper">
+  <div class="search-container">
+    <input type="text" placeholder="Search" #searchInput class="search-input" />
+    <button class="search-button" (click)="searchCoursByCourName(searchInput.value)">Search</button>
+  </div>
+
+  <div class="categories-section">
+    <h2 class="categories-title">Our Categories</h2>
+    <div class="categories-container">
+      <div class="category" *ngFor="let category of categories" (click)="filterCoursByCategory(category?.categoryName)">
+        {{ category.categoryName }}
+      </div>
+    </div>
+  </div>
+
+  <div class="courses-section" *ngIf="courList">
+    <h2 class="courses-title">Our Courses</h2>
+    <div class="course-details">
+      <div class="course-card" *ngFor="let cour of courList">
+        <div class="course-image-container">
+          <img *ngIf="cour?.imageData" [src]="'data:image/png;base64,' + cour?.imageData" alt="Course Image" class="course-image" />
+        </div>
+        <div class="course-text">
+          <div class="course-name">{{cour?.courName }}</div>
+          <div class="course-description">
+            {{ cour?.description!.length > 50 ? cour?.description!.substring(0, 50) + '...' :cour?.description }}
+          </div>
+        </div>
+        <div *ngIf="cour?.discountedPrice !== 0" class="course-price-promotion-container">
+          <div class="course-price">{{ cour?.price }}dt</div>
+          <div class="course-promotion">
+            <div *ngIf="cour?.totalPrice">{{ cour?.totalPrice }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>About LearnUp</h3>
+      <p>Your trusted source for online learning.<br>
+        Explore a wide range of courses to enhance your skills and knowledge.</p>
+    </div>
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="/#/authentication/login">LogIn</a></li>
+        <li><a href="#/authentication/register">Register</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p>Email: support@learnup.com</p>
+      <p>Phone: +123 456 7890</p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2022 LearnUp. All rights reserved.</p>
+  </div>
+</footer>
+

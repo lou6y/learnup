@@ -1,0 +1,144 @@
+.container-fluid {
+  // Favorites toggle buttons
+  .right-icons {
+    .btn-favorite {
+      margin-left: 5px;
+    }
+  }
+
+  // Course details section
+  .cour-details {
+    padding: 20px;
+
+    
+  // Start Course button
+.btn-start-course {
+  margin-bottom: 20px;
+  background-color: #4CAF50; /* Ajoutez votre couleur préférée */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #45a049; /* Change la couleur de fond au survol */
+  }
+
+  // Styles pour l'icône
+  .material-icons {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
+
+
+    // Chapters
+    .chapitres-container {
+      .chapitre-item {
+        margin-bottom: 30px;
+
+        // Video attachment
+        .video-container {
+          margin-bottom: 20px;
+
+          iframe {
+            width: 100%;
+          }
+        }
+
+        // PDF attachment
+        .pdf-object {
+          width: 100%;
+        }
+
+        .attachment {
+          margin-bottom: 20px;
+
+          .btn-secondary {
+            margin-top: 10px;
+          }
+
+          // Download button
+          .btn-download {
+            background-color: green;
+            color: rgb(11, 228, 48);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: darkgreen;
+            }
+          }
+        }
+      }
+    }
+
+    // Message input
+    .message-input {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      input {
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+
+      button {
+        min-width: 100px;
+      }
+    }
+  }
+}
+
+
+// Terminer button
+.btn-terminer {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #f70a0a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c55252;
+  }
+}
+
+// Container pour centrer horizontalement le bouton
+.centered-btn {
+  text-align: center;
+}
+
+.attachment {
+  margin-bottom: 20px;
+
+  .btn-download-pdf {
+    background-color: rgb(18, 29, 233); /* Changer la couleur de fond selon vos préférences */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(43, 91, 223); /* Changer la couleur de fond au survol */
+    }
+  }
+}
+
+
