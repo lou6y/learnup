@@ -34,7 +34,6 @@ export class AppDashboardApprenantComponent {
   ) {}
 
   ngOnInit(): void {
-    this.getCategories();
     this.getUserDetails();
   }
 
@@ -55,21 +54,6 @@ export class AppDashboardApprenantComponent {
       map(payments => payments.filter(payment => payment.cour?.category?.categoryName.toLowerCase() === categoryName.toLowerCase()))
     );
   }
-
-  getCategories(): void {
-    this.courService.getAllCours().subscribe(
-      (cour) => {
-        this.categories = Array.from(new Set(cour.map(cour => cour.category?.categoryName)))
-          .map(categoryName => ({ categoryId: 0, categoryName, cour: [] }));
-
-        console.log('All categories:', this.categories);
-      },
-      (error) => {
-        console.error('Error fetching categories:', error);
-      }
-    );
-  }
-
 
   getUserDetails(): void {
     const storedId = localStorage.getItem('userId');
@@ -93,6 +77,13 @@ export class AppDashboardApprenantComponent {
                   payments.forEach((payment, index) => {
                     payment.cour = cours[index];
                   });
+
+                  // Set the categories based on the fetched courses
+                  this.categories = Array.from(new Set(cours.map(cour => cour.category?.categoryName)))
+                    .map(categoryName => ({ categoryId: 0, categoryName, cour: [] }));
+
+                  console.log('All categories:', this.categories);
+
                   return payments;
                 })
               );

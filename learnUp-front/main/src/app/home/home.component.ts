@@ -43,13 +43,19 @@ export class HomeComponent implements OnInit{
 
   searchCoursByCourName(searchValue: string | undefined): void {
     if (searchValue != null) {
-      this.courList = this.courList.filter(cours => cours?.courName.toLowerCase().includes(searchValue.toLowerCase()));
+      this.courService.getAllCours().subscribe(cours => {
+        this.courList = cours;
+        this.courList = this.courList.filter(cours => cours?.courName.toLowerCase().includes(searchValue.toLowerCase()));
+      });
     }
   }
 
   filterCoursByCategory(categoryName: string | undefined): void {
     if (categoryName != null) {
-      this.courList = this.courList.filter(cours => cours?.category?.categoryName.toLowerCase() === categoryName.toLowerCase());
+      this.courService.getAllCours().subscribe(cours => {
+        this.courList = cours;
+        this.courList = this.courList.filter(cours => cours?.category?.categoryName.toLowerCase() === categoryName.toLowerCase());
+      });
     }
   }
 
